@@ -1,4 +1,17 @@
-/* Default navbar styles */
+.logo {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 101;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -6,24 +19,26 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 15px 30px;
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
     z-index: 100;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-    background: rgba(15, 23, 42, 1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    padding: 0.75rem 2rem;
 }
 
-/* Navigation list */
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
@@ -31,19 +46,34 @@
 }
 
 .nav-item a {
-    color: #e2e8f0;
+    color: #f1f5f9;
     text-decoration: none;
-    font-size: 18px;
-    padding: 8px 16px;
-    display: block;
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: inline-block;
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover state */
 .nav-item a:hover {
     color: #60a5fa;
-    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+    transform: translateY(-2px);
+    text-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+}
+
+/* Underline effect */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa, #7dd3fc);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item a:hover::after {
@@ -51,24 +81,10 @@
     transform-origin: left;
 }
 
-/* Underline animation */
-.nav-item a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    transform-origin: right;
-}
-
-/* Active state */
+/* Glow effect for active state */
 .nav-item a.active {
     color: #60a5fa;
-    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+    text-shadow: 0 0 25px rgba(96, 165, 250, 0.8);
 }
 
 .nav-item a.active::after {
@@ -76,101 +92,54 @@
     transform-origin: left;
 }
 
-/* Image with animated border */
-.image-content {
-    max-width: 500px;
-    margin: 100px auto 0 auto;
-    position: relative;
-}
-
-.image-content::before {
+/* Floating dot indicators */
+.nav-item::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: -4px;
+    right: -4px;
+    width: 6px;
+    height: 6px;
+    background: #60a5fa;
     border-radius: 50%;
-    border: 5px solid #1e3a8a;
-    z-index: -1;
-    animation: blue-border-glow 4s infinite ease-in-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Profile image */
-.profile-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: all 0.5s ease;
+.nav-item:hover::before {
+    opacity: 1;
+    box-shadow: 0 0 10px #60a5fa;
 }
 
-/* Border color animation */
-@keyframes blue-border-glow {
-    0% {
-        border-color: #1e3a8a;
-    }
-    50% {
-        border-color: #60a5fa;
-    }
-    100% {
-        border-color: #1e3a8a;
-    }
-}
-
-/* Responsive adjustments for mobile */
+/* Responsive styles */
 @media (max-width: 768px) {
-    /* Adjust navbar layout for smaller screens */
     .navbar {
-        padding: 10px 20px;
-        justify-content: center;
+        padding: 0.75rem 1.5rem;
     }
 
-    /* Stack nav items vertically on smaller screens */
     .nav-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 15px;
+        gap: 1rem;
     }
 
-    /* Adjust font size and padding for nav links */
     .nav-item a {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-
-    /* Adjust image content margin and max-width for small screens */
-    .image-content {
-        margin: 50px auto;
-        max-width: 400px;
-    }
-
-    /* Ensure profile image scales well */
-    .profile-img {
-        width: 90%;
-        max-width: 300px;
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
     }
 }
 
-/* Further adjustments for very small screens */
 @media (max-width: 480px) {
-    /* Reduce padding and font size even more */
     .navbar {
-        padding: 10px 15px;
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        left: 12px;
     }
 
     .nav-item a {
-        font-size: 14px;
-    }
-
-    .image-content {
-        margin: 30px auto;
-        max-width: 350px;
-    }
-
-    .profile-img {
-        width: 80%;
-        max-width: 250px;
+        font-size: 0.875rem;
+        padding: 0.5rem;
     }
 }
