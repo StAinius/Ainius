@@ -1,4 +1,4 @@
-/* Navigacijos juosta */
+/* Default navbar styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -19,7 +19,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Navigacijos elementai */
+/* Navigation list */
 .nav-list {
     list-style: none;
     display: flex;
@@ -40,7 +40,7 @@
     transition: all 0.3s ease;
 }
 
-/* Hover būsena */
+/* Hover state */
 .nav-item a:hover {
     color: #60a5fa;
     text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
@@ -51,7 +51,7 @@
     transform-origin: left;
 }
 
-/* Apatinė linija */
+/* Underline animation */
 .nav-item a::after {
     content: '';
     position: absolute;
@@ -65,18 +65,18 @@
     transform-origin: right;
 }
 
-/* Active būsena */
+/* Active state */
 .nav-item a.active {
-    color: #60a5fa; /* Šviesiai mėlyna spalva */
-    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5); /* Spindesys */
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 .nav-item a.active::after {
-    transform: scaleX(1); /* Pilnai išskleista underline */
+    transform: scaleX(1);
     transform-origin: left;
 }
 
-/* Nuotrauka su mėlynu animuotu borderiu */
+/* Image with animated border */
 .image-content {
     max-width: 500px;
     margin: 100px auto 0 auto;
@@ -91,12 +91,12 @@
     right: -10px;
     bottom: -10px;
     border-radius: 50%;
-    border: 5px solid #1e3a8a; /* Pradinė tamsesnė mėlyna */
+    border: 5px solid #1e3a8a;
     z-index: -1;
-    animation: blue-border-glow 4s infinite ease-in-out; /* Gradiento animacija */
+    animation: blue-border-glow 4s infinite ease-in-out;
 }
 
-/* Nuotrauka viduje */
+/* Profile image */
 .profile-img {
     width: 100%;
     height: auto;
@@ -105,15 +105,72 @@
     transition: all 0.5s ease;
 }
 
-/* Rėmelio spalvos animacija */
+/* Border color animation */
 @keyframes blue-border-glow {
     0% {
-        border-color: #1e3a8a; /* Tamsi mėlyna */
+        border-color: #1e3a8a;
     }
     50% {
-        border-color: #60a5fa; /* Šviesi mėlyna */
+        border-color: #60a5fa;
     }
     100% {
-        border-color: #1e3a8a; /* Grįžta į tamsią mėlyną */
+        border-color: #1e3a8a;
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    /* Adjust navbar layout for smaller screens */
+    .navbar {
+        padding: 10px 20px;
+        justify-content: center;
+    }
+
+    /* Stack nav items vertically */
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Adjust font size and padding for nav links */
+    .nav-item a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    /* Adjust image content margin and max-width for small screens */
+    .image-content {
+        margin: 50px auto;
+        max-width: 400px;
+    }
+
+    /* Ensure profile image scales well */
+    .profile-img {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    /* Reduce padding and font size even more */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .nav-item a {
+        font-size: 14px;
+    }
+
+    .image-content {
+        margin: 30px auto;
+        max-width: 350px;
+    }
+
+    .profile-img {
+        width: 80%;
+        max-width: 250px;
     }
 }
