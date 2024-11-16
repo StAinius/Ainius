@@ -1,193 +1,52 @@
 <!DOCTYPE html>
 <html lang="lt">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/plogo.png" type="image/png"> 
     <title>Ainius Stonkus</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <a href="#" id="lt-lang" class="language-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg" alt="Lithuania" width="20" height="15"> Lietuviškai
-        </a>
-        <a href="#" id="en-lang" class="language-icon">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="English" width="20" height="15"> English
-        </a>
-    </div>
-    <img src="images/plogo.png" alt="logo" class="logovirsuje">
-    <div class="header-text">
-        <span id="name-text">AINIUS</span> <span class="highlighted">STONKUS</span>
-    </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="active">Pagrindinis</a></li>
+            <li class="nav-item"><a href="about.html">Įgūdžiai</a></li>
+            <li class="nav-item"><a href="services.html">Paslaugos</a></li>
+            <li class="nav-item"><a href="contacts.html">Kontaktai</a></li>
+        </ul>
+    </nav>
 
-    <div class="description" id="description">
-        Turiu kompiuterinių tinklų administravimo bakalauro laipsnį ir baigiau duomenų analitikos kursus.
-        Esu pradedantysis programuotojas, turiu SQL patirties, taip pat užsiimu grafikos dizainu.
-        Be to, mėgėjiškai domiuosi interjero dizainu ir braižau 3D su „SketchUp“, kuriu svetaines.
-    </div>
-    <img class="me" src="images/me.png" alt="me">
-    </div>
-    <img class="background-img" src="images/laptop.png" alt="laptop">
-
-    <!-- Navigation Section -->
-    <header>
-        <nav>
-            <a href="#" id="about" class="active">Apie mane</a>
-            <a href="#" id="services-link">Paslaugos</a>
-            <a href="#" id="projects-link">Projektai</a>
-            <a href="#" id="exp-link">Patirtis</a>
-        </nav>
-    </header>
-
-    <!-- Services Section -->
-    <div class="data-analyst" id="services">
-        <h2 id="data-analyst-title">Duomenų analitika</h2>
-        <p id="data-analyst-text">Baigiau duomenų analitikos kursus, kurie praplėtė mano SQL žinias ir suteikė pagrindus dirbti su
-            duomenų bazėmis. Išmokau rašyti užklausas, analizuoti duomenis ir įgijau Python pagrindus,
-            leidžiančius automatizuoti analizės procesus. Taip pat dirbau su Power BI, kurdamas interaktyvias ataskaitas.
-            Šie įgūdžiai paruošė mane sėkmingai karjerai duomenų analitikos srityje.</p>
-    </div>
-
-    <div class="website">
-        <h2 id="website-title">Svetainių kūrimas</h2>
-        <p id="website-text">Kuriu modernias ir interaktyvias svetaines, naudodamas HTML, CSS ir JavaScript, siekiu patogios ir estetiškos vartotojo patirties. Svetainės yra pritaikytos įvairiems ekranams ir gerai atrodo tiek kompiuteriuose, tiek mobiliuosiuose.</p>
-    </div>
-
-    <div class="cna">
-        <h2 id="cna-title">Kompiuterinių tinklų administravimas</h2>
-        <p id="cna-text">Kauno kolegijoje įgijau bakalauro laipsnį kompiuterinių tinklų administravime. Įgijau žinių apie tinklo konfigūraciją, programavimo pagrindus, tinklo protokolus ir saugumo praktiką.
-        Gebu konfigūruoti maršrutizatorius, komutatorius ir spręsti tinklo problemas, kas paruošė mane sėkmingai karjerai šioje srityje.</p>
-    </div>
-
-    <div class="graphic">
-        <h2 id="graphic-title">Grafinis dizainas</h2>
-        <p id="graphic-text">Mėgėjiškai užsiimu grafikos dizainu, dažniausiai naudodamas „Canva“ programą. Ši platforma leidžia man kurti socialinės žiniasklaidos grafikas, plakatus, skrajutes ir pristatymo medžiagą.
-        Eksperimentuodamas su spalvų teorija, kompozicija ir tipografija, siekiu sukurti estetiškai patrauklius dizainus. Grafikos dizainas man teikia džiaugsmą ir leidžia išreikšti savo kūrybiškumą.</p>
-    </div>
-
-    <div class="interior">
-        <h2 id="interior-title">Interjero dizainas</h2>
-        <p id="interior-text">Naudoju „SketchUp“ 3D interjero dizainui kurti. Ši programa leidžia man vizualizuoti erdves ir kurti detalius modelius, įskaitant baldus ir dekoro elementus. Eksperimentuodamas su skirtingais stiliais, siekiu sukurti unikalius sprendimus, atitinkančius kliento poreikius. 3D modeliavimas padeda aiškiai perteikti idėjas, gerinant bendrą dizaino supratimą. Interjero dizainas man yra kūrybinis procesas, kuris praturtina gyvenimą.</p>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="contact-bar">
-        <h2 id="contact-title">Kontaktai</h2>
-    </div>
-
-    <div class="contact-section">
-        <div class="contact-info">
-            <h2>Kontaktinė informacija</h2>
-            <div class="contact-item">
-                <img src="images/mail.svg" alt="El. paštas">
-                <p><strong>El. paštas:</strong> stonkusainius@gmail.com</p>
+    <section class="intro-container">
+        <header class="header">
+            <h1 class="header-title">
+                <span class="plain">AINIUS</span> <span class="highlight">STONKUS</span>
+            </h1>
+        </header>
+        <div class="intro">
+            <h1>Trumpai apie mane:</h1>
+            <p>
+                Kauno kolegijoje baigiau ir įgavau kompiuterinių tinklų administravimo bakalauro laipsnį, taip pat baigiau duomenų analitikos kursus.
+                Esu pradedantysis programuotojas, turiu SQL patirties. Mėgėjiškai užsiimu svetainių kūrimu, grafikos ir interjero dizainu, braižau 3D dizainus su "SketchUp" programa.
+            </p>
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/ainius-stonkus/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/stonkus.ainius/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/ainius.stonkus" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
             </div>
-            <div class="contact-item">
-                <img src="images/phone.svg" alt="mobnr">
-                <p><strong>Telefonas:</strong> +370 695 54829</p>
-            </div>
-            <div class="contact-item">
-                <img src="images/location.svg" alt="location">
-                <p><strong>Vieta:</strong> Vilnius, Lietuva</p>
-            </div>
+            <a href="files/Ainius Stonkus LT CV.pdf" download class="download-btn">Atsisiųsti CV</a>
         </div>
-        <img src="images/logo.png" alt="logo" class="logocontact">
-        <div class="contact-form">
-            <h2 id="contact-form-title">Parašykite man</h2>
-            <form id="contactForm" action="https://formspree.io/f/xzzbrjaa" method="POST">
-                <input type="email" name="email" placeholder="Jūsų el. paštas" required>
-                <textarea name="message" placeholder="Jūsų žinutė" required></textarea>
-                <button type="submit">Siųsti</button>
-            </form>
-            <!-- Pranešimai apie užklausas -->
-            <div id="successMessage" class="message" style="display: none; color: white; background-color: #009107;">
-                Žinutė išsiųsta sėkmingai! Ačiū, kad susisiekėte!
-            </div>
-            <div id="errorMessage" class="message" style="display: none; color: white; background-color: #bd1d1d;">
-                Klaida siunčiant žinutę. Bandykite dar kartą.
-            </div>
+        <div class="image-content">
+            <img src="images/me.png" alt="Mano nuotrauka" class="profile-img">
         </div>
-    </div>
-    
-    
+    </section>
 
-
-    <!-- JavaScript for Language Toggle and Form Submission -->
-    <script>
-        const translations = {
-            lt: {
-                "name-text": "AINIUS",
-                "description": "Turiu kompiuterinių tinklų administravimo bakalauro laipsnį ir baigiau duomenų analitikos kursus. Esu pradedantysis programuotojas, turiu SQL patirties, taip pat užsiimu grafikos dizainu. Be to, mėgėjiškai domiuosi interjero dizainu ir braižau 3D su „SketchUp“.",
-                "data-analyst-title": "Duomenų analitika",
-                "data-analyst-text": "Baigiau duomenų analitikos kursus, kurie praplėtė mano SQL žinias ir suteikė pagrindus dirbti su duomenų bazėmis. Išmokau rašyti užklausas, analizuoti duomenis ir įgijau Python pagrindus, leidžiančius automatizuoti analizės procesus. Taip pat dirbau su Power BI, kurdamas interaktyvias ataskaitas. Šie įgūdžiai paruošė mane sėkmingai karjerai duomenų analitikos srityje.",
-                "website-title": "Svetainių kūrimas",
-                "website-text": "Kuriu modernias ir interaktyvias svetaines, naudodamas HTML, CSS ir JavaScript, siekiu patogios ir estetiškos vartotojo patirties. Svetainės yra pritaikytos įvairiems ekranams ir gerai atrodo tiek kompiuteriuose, tiek mobiliuosiuose.",
-                "cna-title": "Kompiuterinių tinklų administravimas",
-                "cna-text": "Kauno kolegijoje įgijau bakalauro laipsnį kompiuterinių tinklų administravime. Įgijau žinių apie tinklo konfigūraciją, programavimo pagrindus, tinklo protokolus ir saugumo praktiką. Gebu konfigūruoti maršrutizatorius, komutatorius ir spręsti tinklo problemas, kas paruošė mane sėkmingai karjerai šioje srityje.",
-                "graphic-title": "Grafinis dizainas",
-                "graphic-text": "Mėgėjiškai užsiimu grafikos dizainu, dažniausiai naudodamas „Canva“ programą. Ši platforma leidžia man kurti socialinės žiniasklaidos grafikas, plakatus, skrajutes ir pristatymo medžiagą. Eksperimentuodamas su spalvų teorija, kompozicija ir tipografija, siekiu sukurti estetiškai patrauklius dizainus. Grafikos dizainas man teikia džiaugsmą ir leidžia išreikšti savo kūrybiškumą.",
-                "interior-title": "Interjero dizainas",
-                "interior-text": "Naudoju „SketchUp“ 3D interjero dizainui kurti. Ši programa leidžia man vizualizuoti erdves ir kurti detalius modelius, įskaitant baldus ir dekoro elementus. Eksperimentuodamas su skirtingais stiliais, siekiu sukurti unikalius sprendimus, atitinkančius kliento poreikius. 3D modeliavimas padeda aiškiai perteikti idėjas, gerinant bendrą dizaino supratimą. Interjero dizainas man yra kūrybinis procesas, kuris praturtina gyvenimą.",
-                "contact-title": "Kontaktai",
-                "contact-form-title": "Parašykite man",
-                "about": "Apie mane",
-                "services-link": "Paslaugos",
-                "projects-link": "Projektai",
-                "exp-link": "Patirtis"
-            },
-            en: {
-                "name-text": "AINIUS",
-                "description": "I have a Bachelor's degree in Computer Network Administration and completed data analytics courses. I am a beginner programmer with SQL experience, and I also do graphic design. Additionally, I am an amateur interior designer and create 3D models with SketchUp.",
-                "data-analyst-title": "Data Analytics",
-                "data-analyst-text": "I completed data analytics courses that expanded my SQL skills and provided a foundation for working with databases. I learned to write queries, analyze data, and gained basic Python skills, enabling me to automate analysis processes. I also worked with Power BI, creating interactive reports. These skills have prepared me for a successful career in data analytics.",
-                "website-title": "Website Development",
-                "website-text": "I build modern and interactive websites using HTML, CSS, and JavaScript, aiming for a user-friendly and aesthetically pleasing experience. Websites are responsive and look great on both desktops and mobile devices.",
-                "cna-title": "Computer Network Administration",
-                "cna-text": "I earned a Bachelor's degree in Computer Network Administration from Kaunas University of Applied Sciences. I gained knowledge of network configuration, basic programming, network protocols, and security practices. I am able to configure routers, switches, and troubleshoot network issues, which has prepared me for a successful career in this field.",
-                "graphic-title": "Graphic Design",
-                "graphic-text": "I am an amateur graphic designer, primarily using the Canva platform. This tool allows me to create social media graphics, posters, flyers, and presentation materials. By experimenting with color theory, composition, and typography, I aim to create visually appealing designs. Graphic design brings me joy and allows me to express my creativity.",
-                "interior-title": "Interior Design",
-                "interior-text": "I use SketchUp to create 3D interior designs. This software allows me to visualize spaces and create detailed models, including furniture and decor elements. By experimenting with different styles, I aim to create unique solutions that meet the client's needs. 3D modeling helps convey ideas clearly, improving overall design understanding. Interior design is a creative process that enriches life.",
-                "contact-title": "Contact",
-                "contact-form-title": "Write to Me",
-                "about": "About Me",
-                "services-link": "Services",
-                "projects-link": "Projects",
-                "exp-link": "Experience"
-            }
-        };
-
-
-        // Kalbos pasikeitimas
-        function changeLanguage(lang) {
-            if (translations[lang]) {
-                Object.keys(translations[lang]).forEach(function(key) {
-                    const element = document.getElementById(key);
-                    if (element) {
-                        element.textContent = translations[lang][key];
-                    }
-                });
-            }
-        }
-
-        // Kalbos parinkimas
-        document.getElementById('lt-lang').addEventListener('click', function() {
-            changeLanguage('lt');
-        });
-
-        document.getElementById('en-lang').addEventListener('click', function() {
-            changeLanguage('en');
-        });
-
-    </script>
+    <script src="scripts.js"></script>
 </body>
-
-<footer>
-    <p class="center-text">&copy; 2024 Ainius Stonkus</p>
-</footer>
-
 </html>
