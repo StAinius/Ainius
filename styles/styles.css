@@ -33,12 +33,27 @@ body {
     gap: 15px;
     color: #e2e8f0;
     font-weight: 600;
-    background: linear-gradient(90deg, #b0d4ff, #2875d3);
-    background-clip: text; 
+    background: linear-gradient(90deg, #b0d4ff, #2875d3, #60a5fa, #94a3b8);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
     text-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
     letter-spacing: 1px;
     position: relative;
+    animation: gradient-flow 5s infinite linear;
+}
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .header-title::after {
@@ -167,9 +182,71 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
-                0 0 0 5px rgba(96, 165, 250, 0.2);
-    transition: all 0.5s ease;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5), 
+        0 0 15px rgba(96, 165, 250, 0.4), 
+        0 0 30px rgba(96, 165, 250, 0.3),
+        0 0 60px rgba(96, 165, 250, 0.2);
+    border: 5px solid transparent;
+    background: linear-gradient(135deg, #0f172a, #1e293b) padding-box, 
+                linear-gradient(135deg, #3b82f6, #60a5fa, #a5f3fc) border-box;
+    animation: border-glow 3s infinite alternate, shadow-pulse 5s infinite linear;
+    transition: transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-img::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.2), transparent);
+    animation: halo-effect 5s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes border-glow {
+    0% {
+        border-image-source: linear-gradient(135deg, #3b82f6, #60a5fa, #a5f3fc);
+    }
+    50% {
+        border-image-source: linear-gradient(135deg, #60a5fa, #a5f3fc, #3b82f6);
+    }
+    100% {
+        border-image-source: linear-gradient(135deg, #a5f3fc, #3b82f6, #60a5fa);
+    }
+}
+
+@keyframes shadow-pulse {
+    0%, 100% {
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.5), 
+            0 0 15px rgba(96, 165, 250, 0.4), 
+            0 0 30px rgba(96, 165, 250, 0.3), 
+            0 0 60px rgba(96, 165, 250, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 10px 30px rgba(0, 0, 0, 0.5), 
+            0 0 25px rgba(96, 165, 250, 0.6), 
+            0 0 50px rgba(96, 165, 250, 0.5), 
+            0 0 80px rgba(96, 165, 250, 0.4);
+    }
+}
+
+@keyframes halo-effect {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
 }
 
 /*------------------ Mobile Adjustments ------------------*/
@@ -207,6 +284,5 @@ body {
         margin-bottom: 10px;
     }
 }
-
 
 
