@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktai</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/contactsstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html">Pagrindinis</a></li>
+            <li class="nav-item"><a href="about.html">Įgūdžiai</a></li>
+            <li class="nav-item"><a href="services.html">Paslaugos</a></li>
+            <li class="nav-item"><a href="contacts.html" class="active">Kontaktai</a></li>
+        </ul>
+    </nav>
+    <section class="contacts-container">
+        <div class="intro">
+            <h1>Susisiekime</h1>
+            <p>
+                Turite klausimų ar norite aptarti galimą bendradarbiavimą? 
+                Susisiekite su manimi vienu iš žemiau nurodytų būdų arba užpildykite kontaktų formą.
+            </p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="fas fa-envelope contact-icon"></i>
+                <h3>El. Paštas</h3>
+                <a href="mailto:stonkusainius@gmail.com">stonkusainius@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone contact-icon"></i>
+                <h3>Telefonas</h3>
+                <a href="tel:+37069554829">+370 695 54829</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <h3>Vieta</h3>
+                <p>Vilnius, Lietuva</p>
+            </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <h2>Kontaktų forma</h2>
+            <div class="form-group">
+                <label for="email">Jūsų El. paštas</label>
+                <input type="email" id="email" name="email" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Jūsų žinutė</label>
+                <textarea id="message" name="message" autocomplete="off" required></textarea>
+            </div>
+            <button type="button" id="submitForm" class="submit-btn">Siųsti žinutę</button>
+            <div id="statusMessage"></div>
+        </form>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ainius-stonkus/" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/stonkus.ainius/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/ainius.stonkus" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // Inicializuojame EmailJS su savo user ID
+        emailjs.init("qkBSDKHk2ugkjcBps");
+
+        document.getElementById('submitForm').addEventListener('click', function () {
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            console.log("User email:", email);  // Rodo, kokį email įvedė naudotojas
+            console.log("User message:", message);  // Rodo, kokią žinutę įvedė naudotojas
+
+            // Patikrinimas, ar abu laukus naudotojas užpildė
+            if (!email || !message) {
+                alert("Prašome užpildyti visus laukus!");
+                console.log("Form is incomplete.");
+                return;
+            }
+
+            const submitBtn = document.getElementById('submitForm');
+            submitBtn.innerText = "Siunčiama...";  // Pakeičiam tekstą
+            submitBtn.disabled = true;  // Užblokuojame mygtuką, kad nebūtų paspaustas kelis kartus
+
+            // Pradedame siųsti užklausą į EmailJS
+            console.log("Sending email...");
+            emailjs.send("service_0uwjm9o", "template_jmo1ypj", {
+                from_name: email,
+                message: message
+            }).then(function (response) {
+                // Jei užklausa sėkminga
+                console.log("Success response:", response);
+                const statusMessage = document.getElementById('statusMessage');
+                statusMessage.style.display = 'block';
+                statusMessage.style.backgroundColor = '#d4edda';
+                statusMessage.style.color = '#155724';
+                statusMessage.innerText = "Žinutė sėkmingai išsiųsta!";
+                submitBtn.innerText = "Siųsti žinutę";
+                submitBtn.disabled = false;  // Atblokavimas
+                document.getElementById('contactForm').reset();  // Išvalome formą
+            }).catch(function (error) {
+                // Jei užklausa nepavyksta
+                console.error("Error response:", error);  // Atvaizduos klaidos atsakymą
+                const statusMessage = document.getElementById('statusMessage');
+                statusMessage.style.display = 'block';
+                statusMessage.style.backgroundColor = '#f8d7da';
+                statusMessage.style.color = '#721c24';
+                statusMessage.innerText = "Klaida siunčiant žinutę. Bandykite dar kartą.";
+                submitBtn.innerText = "Siųsti žinutę";
+                submitBtn.disabled = false;  // Atblokavimas
+            });
+        });
+    </script>
+</body>
+</html>

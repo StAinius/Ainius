@@ -1,0 +1,119 @@
+/* Navigacijos juosta */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(15, 23, 42, 1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigacijos elementai */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover būsena */
+.nav-item a:hover {
+    color: #60a5fa;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
+}
+
+.nav-item a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Apatinė linija */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+/* Active būsena */
+.nav-item a.active {
+    color: #60a5fa; /* Šviesiai mėlyna spalva */
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5); /* Spindesys */
+}
+
+.nav-item a.active::after {
+    transform: scaleX(1); /* Pilnai išskleista underline */
+    transform-origin: left;
+}
+
+/* Nuotrauka su mėlynu animuotu borderiu */
+.image-content {
+    max-width: 500px;
+    margin: 100px auto 0 auto;
+    position: relative;
+}
+
+.image-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 5px solid #1e3a8a; /* Pradinė tamsesnė mėlyna */
+    z-index: -1;
+    animation: blue-border-glow 4s infinite ease-in-out; /* Gradiento animacija */
+}
+
+/* Nuotrauka viduje */
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease;
+}
+
+/* Rėmelio spalvos animacija */
+@keyframes blue-border-glow {
+    0% {
+        border-color: #1e3a8a; /* Tamsi mėlyna */
+    }
+    50% {
+        border-color: #60a5fa; /* Šviesi mėlyna */
+    }
+    100% {
+        border-color: #1e3a8a; /* Grįžta į tamsią mėlyną */
+    }
+}
