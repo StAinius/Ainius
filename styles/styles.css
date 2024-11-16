@@ -20,7 +20,7 @@ body {
 /*------------------ Header ------------------*/
 .header {
     position: absolute;
-    top: 40px;  
+    top: 40px;  /* Changed from 120px to 40px */
     left: 50px;
     z-index: 1;
 }
@@ -171,78 +171,27 @@ body {
     transition: all 0.5s ease;
 }
 
-/*------------------ Responsive Design ------------------*/
+/*------------------ Mobile Adjustments ------------------*/
+@media (max-width: 768px) {
+    .header {
+        left: 20px; /* Adjusting left position for smaller screens */
+        top: 30px; /* Reduced space at the top */
+        padding-left: 20px; /* Adding padding to avoid touching the edge */
+    }
 
-@media only screen and (max-width: 768px) {
     .header-title {
-        font-size: 50px;
-        gap: 10px;
-    }
-
-    .intro-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    .intro {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .intro h1 {
-        font-size: 28px;
-    }
-
-    .intro p {
-        font-size: 16px;
-    }
-
-    .social-icon {
-        font-size: 24px;
-    }
-
-    .download-btn {
-        font-size: 16px;
-        padding: 12px 24px;
-    }
-
-    .image-content {
-        margin-top: 30px;
-        max-width: 400px;
-        margin-right: 0;
+        font-size: 48px; /* Reducing font size for mobile */
+        text-align: center; /* Centering title on smaller screens */
+        line-height: 1.2; /* Reducing line height */
+        letter-spacing: 0.5px;
+        white-space: normal; /* Allow title to break into multiple lines if needed */
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
     .header-title {
-        font-size: 40px;
-    }
-
-    .intro-container {
-        padding: 15px;
-    }
-
-    .intro h1 {
-        font-size: 24px;
-    }
-
-    .intro p {
-        font-size: 14px;
-    }
-
-    .social-icon {
-        font-size: 20px;
-        margin-right: 20px;
-    }
-
-    .download-btn {
-        font-size: 14px;
-        padding: 10px 20px;
-    }
-
-    .image-content {
-        max-width: 300px;
-        margin-top: 20px;
+        font-size: 36px; /* Even smaller font size for very small screens */
+        text-align: center; /* Ensuring the text is still centered */
+        line-height: 1.2; /* Reduce line height */
     }
 }
