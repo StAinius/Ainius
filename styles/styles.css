@@ -172,6 +172,7 @@ body {
 }
 
 /*------------------ Mobile Adjustments ------------------*/
+/*------------------ Mobile Adjustments ------------------*/
 @media (max-width: 768px) {
     .header {
         left: 20px; /* Adjusting left position for smaller screens */
@@ -185,6 +186,12 @@ body {
         line-height: 1.2; /* Reducing line height */
         letter-spacing: 0.5px;
         white-space: normal; /* Allow title to break into multiple lines if needed */
+        margin-bottom: 30px; /* Increased margin-bottom to avoid overlapping with line */
+    }
+
+    .intro h1 {
+        margin-top: 0; /* Ensuring no extra margin at the top */
+        margin-bottom: 15px; /* Adjusting margin to keep text and line separated */
     }
 }
 
@@ -193,5 +200,10 @@ body {
         font-size: 36px; /* Even smaller font size for very small screens */
         text-align: center; /* Ensuring the text is still centered */
         line-height: 1.2; /* Reduce line height */
+        margin-bottom: 20px; /* Adjusting margin to maintain spacing */
+    }
+
+    .intro h1 {
+        margin-bottom: 10px; /* Adjusting space between title and description */
     }
 }
