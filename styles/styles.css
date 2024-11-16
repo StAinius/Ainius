@@ -175,37 +175,38 @@ body {
 /*------------------ Mobile Adjustments ------------------*/
 @media (max-width: 768px) {
     .header {
-        left: 20px; /* Adjusting left position for smaller screens */
-        top: 30px; /* Reduced space at the top */
-        padding-left: 20px; /* Adding padding to avoid touching the edge */
+        left: 20px;
+        top: 30px;
+        padding-left: 20px;
     }
 
     .header-title {
-        font-size: 48px; /* Reducing font size for mobile */
-        text-align: center; /* Centering title on smaller screens */
-        line-height: 1.2; /* Reducing line height */
+        font-size: 48px;
+        text-align: center;
+        line-height: 1.2;
         letter-spacing: 0.5px;
-        white-space: normal; /* Allow title to break into multiple lines if needed */
-        margin-bottom: 30px; /* Increased margin-bottom to avoid overlapping with line */
+        white-space: normal;
+        margin-bottom: 30px;
     }
 
     .intro h1 {
-        margin-top: 0; /* Ensuring no extra margin at the top */
-        margin-bottom: 15px; /* Adjusting margin to keep text and line separated */
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 }
 
 @media (max-width: 480px) {
     .header-title {
-        font-size: 36px; /* Even smaller font size for very small screens */
-        text-align: center; /* Ensuring the text is still centered */
-        line-height: 1.2; /* Reduce line height */
-        margin-bottom: 20px; /* Adjusting margin to maintain spacing */
+        font-size: 36px;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 20px;
     }
 
     .intro h1 {
-        margin-bottom: 10px; /* Adjusting space between title and description */
+        margin-bottom: 10px;
     }
 }
+
 
 
