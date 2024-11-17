@@ -16,6 +16,26 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+.language-selector {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    flex-direction: column;
+    right: 20px;
+    top: 20px;
+}
+
+.flag-icon {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.flag-icon:hover {
+    opacity: 0.7;
+}
+
 
 /*------------------ Header ------------------*/
 .header {

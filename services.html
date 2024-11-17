@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +10,26 @@
     <link rel="icon" href="images/logo.png" type="logotipas">
 </head>
 <body>
+    <div class="language-selector">
+        <img src="https://flagicons.lipis.dev/flags/4x3/lt.svg" alt="Lietuva" class="flag-icon" data-lang="lt" onclick="saveLanguagePreference('lt')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="United Kingdom" class="flag-icon" data-lang="en" onclick="saveLanguagePreference('en')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="España" class="flag-icon" data-lang="es" onclick="saveLanguagePreference('es')">
+    </div>
     <nav class="navbar">
         <img src="images/logo.png" alt="Logo" class="logo">
         <ul class="nav-list">
-            <li class="nav-item"><a href="index.html">Pagrindinis</a></li>
-            <li class="nav-item"><a href="about.html">Įgūdžiai</a></li>
-            <li class="nav-item"><a href="services.html" class="active">Paslaugos</a></li>
-            <li class="nav-item"><a href="contacts.html">Kontaktai</a></li>
+            <li class="nav-item"><a href="index.html" id="home-nav">Pagrindinis</a></li>
+            <li class="nav-item"><a href="skills.html" id="skills-nav">Įgūdžiai</a></li>
+            <li class="nav-item"><a href="services.html" class="active" id="services-nav">Paslaugos</a></li>
+            <li class="nav-item"><a href="contacts.html" id="contacts-nav">Kontaktai</a></li>
         </ul>
     </nav>
 
 
     <section class="services-container">
         <div class="intro">
-            <h1>Mano teikiamos paslaugos</h1>
-            <p>
+            <h1 id="services-title">Mano teikiamos paslaugos</h1>
+            <p id="services-description">
                 Siūlau platų IT ir dizaino paslaugų spektrą, pritaikytą individualiems jūsų poreikiams.
                 Kiekvienas projektas yra unikalus, todėl visada stengiuosi rasti geriausią sprendimą.
             </p>
@@ -34,17 +39,17 @@
             <div class="service-card">
                 <div class="service-header">
                     <i class="fas fa-code service-icon"></i>
-                    <h2 class="service-title">Svetainių kūrimas</h2>
-                    <p class="service-description">
+                    <h2 class="service-title" id="web-development-title">Svetainių kūrimas</h2>
+                    <p class="service-description" id="web-development-description">
                         Kuriu modernias, funkcionalias ir patrauklias svetaines
                     </p>
                 </div>
                 <div class="service-content">
                     <ul class="service-features">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Puslapio optimizavimas</li>
+                        <li id="html">HTML</li>
+                        <li id="css">CSS</li>
+                        <li id="javascript">JavaScript</li>
+                        <li id="optimization">Puslapio optimizavimas</li>
                     </ul>
                 </div>
             </div>
@@ -52,17 +57,17 @@
             <div class="service-card">
                 <div class="service-header">
                     <i class="fas fa-database service-icon"></i>
-                    <h2 class="service-title">Duomenų analizė</h2>
-                    <p class="service-description">
+                    <h2 class="service-title" id="data-analysis-title">Duomenų analizė</h2>
+                    <p class="service-description" id="data-analysis-description">
                         Analizuoju duomenis ir padedu priimti duomenimis pagrįstus sprendimus
                     </p>
                 </div>
                 <div class="service-content">
                     <ul class="service-features">
-                        <li>SQL duomenų bazės</li>
-                        <li>Duomenų vizualizacija</li>
-                        <li>Statistinė analizė</li>
-                        <li>Veiklos įžvalgos</li>
+                        <li id="sql">SQL duomenų bazės</li>
+                        <li id="visualization">Duomenų vizualizacija</li>
+                        <li id="statistics">Statistinė analizė</li>
+                        <li id="insights">Veiklos įžvalgos</li>
                     </ul>
                 </div>
             </div>
@@ -70,54 +75,54 @@
             <div class="service-card">
                 <div class="service-header">
                     <i class="fas fa-paint-brush service-icon"></i>
-                    <h2 class="service-title">Dizaino paslaugos</h2>
-                    <p class="service-description">
+                    <h2 class="service-title" id="design-services-title">Dizaino paslaugos</h2>
+                    <p class="service-description" id="design-services-description">
                         Kuriu unikalų ir funkcionalų dizainą, siekiant išsiskirti ir pasiekti aukščiausius rezultatus.
                     </p>
                 </div>
                 <div class="service-content">
                     <ul class="service-features">
-                        <li>Interjero dizainas</li>
-                        <li>3D modeliavimas</li>
-                        <li>Grafinis dizainas</li>
-                        <li>UI/UX dizainas</li>
+                        <li id="interior-design">Interjero dizainas</li>
+                        <li id="3d-modeling">3D modeliavimas</li>
+                        <li id="graphic-design">Grafinis dizainas</li>
+                        <li id="ui-ux-design">UI/UX dizainas</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="why-choose-section">
-            <h2>Kodėl verta rinktis mane?</h2>
+            <h2 id="why-choose-title">Kodėl verta rinktis mane?</h2>
             <div class="benefits-grid">
                 <div class="benefit-item">
                     <i class="fas fa-check-circle benefit-icon"></i>
                     <div class="benefit-content">
-                        <h3>Patirtis</h3>
-                        <p>Turiu patirties įvairiuose IT ir dizaino projektuose</p>
+                        <h3 id="experience-title">Patirtis</h3>
+                        <p id="experience-description">Turiu patirties įvairiuose IT ir dizaino projektuose</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <i class="fas fa-clock benefit-icon"></i>
                     <div class="benefit-content">
-                        <h3>Terminų laikymasis</h3>
-                        <p>Projektai atliekami laiku ir kokybiškai</p>
+                        <h3 id="timeliness-title">Terminų laikymasis</h3>
+                        <p id="timeliness-description">Projektai atliekami laiku ir kokybiškai</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <i class="fas fa-comments benefit-icon"></i>
                     <div class="benefit-content">
-                        <h3>Komunikacija</h3>
-                        <p>Nuolatinis bendravimas projekto eigoje</p>
+                        <h3 id="communication-title">Komunikacija</h3>
+                        <p id="communication-description">Nuolatinis bendravimas projekto eigoje</p>
                     </div>
                 </div>
 
                 <div class="benefit-item">
                     <i class="fas fa-sync benefit-icon"></i>
                     <div class="benefit-content">
-                        <h3>Lankstumas</h3>
-                        <p>Prisitaikau prie individualių poreikių</p>
+                        <h3 id="flexibility-title">Lankstumas</h3>
+                        <p id="flexibility-description">Prisitaikau prie individualių poreikių</p>
                     </div>
                 </div>
             </div>
@@ -125,6 +130,6 @@
 
     </section>
 
-    <script src="scripts.js"></script>
+    <script src="scripts/services-scripts.js"></script>
 </body>
 </html>

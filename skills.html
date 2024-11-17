@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Įgūdžiai</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/aboutstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <div class="language-selector">
+        <img src="https://flagicons.lipis.dev/flags/4x3/lt.svg" alt="Lietuva" class="flag-icon" data-lang="lt" onclick="saveLanguagePreference('lt')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="United Kingdom" class="flag-icon" data-lang="en" onclick="saveLanguagePreference('en')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="España" class="flag-icon" data-lang="es" onclick="saveLanguagePreference('es')">
+    </div>
+
+    <nav class="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" id="home-nav">Pagrindinis</a></li>
+            <li class="nav-item"><a href="skills.html" class="active" id="skills-nav">Įgūdžiai</a></li>
+            <li class="nav-item"><a href="services.html" id="services-nav">Paslaugos</a></li>
+            <li class="nav-item"><a href="contacts.html" id="contacts-nav">Kontaktai</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-container">
+        <div class="skills-section">
+            <h2 id="skills-title">Mano įgūdžiai</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3 id="programming-title">Programavimas</h3>
+                    <ul id="programming-list">
+                        <li>SQL duomenų bazių valdymas</li>
+                        <li>HTML & CSS</li>
+                        <li>Pradedantysis JavaScript</li>
+                        <li>Pradedantysis Python</li>
+                        <li>Duomenų analitika</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 id="networking-title">Tinklų administravimas</h3>
+                    <ul id="networking-list">
+                        <li>Kompiuterinių tinklų projektavimas</li>
+                        <li>Tinklų saugumo užtikrinimas</li>
+                        <li>Serverių priežiūra</li>
+                        <li>Sistemos administravimas</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3 id="design-title">Dizainas</h3>
+                    <ul id="design-list">
+                        <li>Svetainių dizainas</li>
+                        <li>Interjero dizainas</li>
+                        <li>3D modeliavimas su SketchUp</li>
+                        <li>Grafinis dizainas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-section">
+            <h2 id="education-title">Išsilavinimas ir kursai</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date" id="timeline-1-date">2017 - 2020</div>
+                    <div class="timeline-content">
+                        <strong id="timeline-1-institution">Kauno kolegija</strong>
+                        <p id="timeline-1-degree">Kompiuterinių tinklų administravimo bakalauras</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" id="timeline-2-date">2024</div>
+                    <div class="timeline-content">
+                        <strong id="timeline-2-course">Duomenų analitikos kursai</strong>
+                        <p id="timeline-2-description">SQL ir duomenų analizės įgūdžių tobulinimas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts/skills-scripts.js"></script>
+</body>
+</html>

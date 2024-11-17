@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lt">
+<html lang="">
 <head>
     <meta charset="UaTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,19 @@
     <link rel="icon" href="images/logo.png" type="logotipas">
 </head>
 <body>
+    <div class="language-selector">
+        <img src="https://flagicons.lipis.dev/flags/4x3/lt.svg" alt="Lietuva" class="flag-icon" data-lang="lt" onclick="saveLanguagePreference('lt')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="United Kingdom" class="flag-icon" data-lang="en" onclick="saveLanguagePreference('en')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="España" class="flag-icon" data-lang="es" onclick="saveLanguagePreference('es')">
+    </div>
+
     <nav class="navbar">
         <img src="images/logo.png" alt="Logo" class="logo">
         <ul class="nav-list">
-            <li class="nav-item"><a href="index.html" class="active">Pagrindinis</a></li>
-            <li class="nav-item"><a href="about.html">Įgūdžiai</a></li>
-            <li class="nav-item"><a href="services.html">Paslaugos</a></li>
-            <li class="nav-item"><a href="contacts.html">Kontaktai</a></li>
+            <li class="nav-item"><a href="index.html" class="active" id="home-nav">Pagrindinis</a></li>
+            <li class="nav-item"><a href="skills.html" id="skills-nav">Įgūdžiai</a></li>
+            <li class="nav-item"><a href="services.html" id="services-nav">Paslaugos</a></li>
+            <li class="nav-item"><a href="contacts.html" id="contacts-nav">Kontaktai</a></li>
         </ul>
     </nav>
 
@@ -25,6 +31,7 @@
                 <span class="plain">AINIUS</span> <span class="highlight">STONKUS</span>
             </h1>
         </header>
+        
         <div class="intro">
             <h1>Trumpai apie mane:</h1>
             <p>
@@ -48,7 +55,6 @@
             <img src="images/me.png" alt="Mano nuotrauka" class="profile-img">
         </div>
     </section>
-
-    <script src="scripts.js"></script>
+    <script src="scripts/index-scripts.js"></script>
 </body>
 </html>
