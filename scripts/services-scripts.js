@@ -135,7 +135,7 @@ function changeLanguage(language) {
 // Automatiškai užkrauti pasirinktą kalbą arba numatytąją (lietuvių kalbą)
 document.addEventListener("DOMContentLoaded", () => {
     // Patikrinti išsaugotą kalbą, jei nėra, naudoti "lt"
-    const preferredLanguage = localStorage.getItem("preferredLanguage") || "lt";
+    const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
     changeLanguage(preferredLanguage);
 });
 

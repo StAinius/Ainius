@@ -12,6 +12,8 @@
     justify-content: center;
 }
 
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -20,16 +22,16 @@
     display: flex;
     justify-content: flex-end;
     padding: 1rem 2rem;
-    background: rgba(30, 41, 59, 0.4);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 25px rgba(66, 135, 245, 0.1);
     z-index: 100;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar.scrolled {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #f0f9ff 0%, #cbedff 100%);
+    box-shadow: 0 4px 30px rgba(66, 135, 245, 0.15);
     padding: 0.75rem 2rem;
 }
 
@@ -43,10 +45,11 @@
 
 .nav-item {
     position: relative;
+    overflow: hidden;
 }
 
 .nav-item a {
-    color: #f1f5f9;
+    color: #1e293b;
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 500;
@@ -57,9 +60,8 @@
 }
 
 .nav-item a:hover {
-    color: #60a5fa;
+    color: #4287f5;
     transform: translateY(-2px);
-    text-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
 }
 
 /* Underline effect */
@@ -70,7 +72,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa, #7dd3fc);
+    background: linear-gradient(90deg, #4287f5, #2563eb);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,8 +85,8 @@
 
 /* Glow effect for active state */
 .nav-item a.active {
-    color: #60a5fa;
-    text-shadow: 0 0 25px rgba(96, 165, 250, 0.8);
+    color: #2563eb;
+    font-weight: 600;
 }
 
 .nav-item a.active::after {
@@ -92,7 +94,7 @@
     transform-origin: left;
 }
 
-/* Floating dot indicators */
+/* Subtle hover indicator */
 .nav-item::before {
     content: '';
     position: absolute;
@@ -100,21 +102,23 @@
     right: -4px;
     width: 6px;
     height: 6px;
-    background: #60a5fa;
+    background: #4287f5;
     border-radius: 50%;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
+    transform: scale(0);
 }
 
 .nav-item:hover::before {
     opacity: 1;
-    box-shadow: 0 0 10px #60a5fa;
+    transform: scale(1);
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .navbar {
         padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.8);
     }
 
     .nav-list {

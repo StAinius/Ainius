@@ -11,7 +11,7 @@ const translations = {
     },
     "en": {
         "header-title": "AINIUS STONKUS",
-        "intro-title": "A little about me:",
+        "intro-title": "About me:",
         "intro-text": "I graduated from Kaunas College with a Bachelor's degree in Computer Network Administration, and also completed courses in Data Analytics. I am a beginner programmer with experience in SQL. I have a hobby of web development, graphic and interior design, and I create 3D designs using SketchUp.",
         "download-cv": "Download CV",
         "home-nav": "Home",
@@ -31,10 +31,8 @@ const translations = {
     }
 };
 
-// Funkcija kalbos keitimui
-// Funkcija, kuri keičia kalbą puslapyje ir išsaugo vartotojo pasirinkimą
 function changeLanguage(language) {
-    // Atnaujiname tekstus pagal pasirinktą kalbą
+
     document.querySelector('.header-title').textContent = translations[language]["header-title"];
     document.querySelector('.intro h1').textContent = translations[language]["intro-title"];
     document.querySelector('.intro p').textContent = translations[language]["intro-text"];
@@ -50,16 +48,18 @@ function changeLanguage(language) {
     localStorage.setItem("preferredLanguage", language);
 }
 
-// Patikriname, kokia kalba buvo išsaugota localStorage ir pritaikome ją puslapyje
 document.addEventListener("DOMContentLoaded", () => {
-    const preferredLanguage = localStorage.getItem("preferredLanguage") || "lt"; // Jei nėra išsaugotos kalbos, nustatome "lt"
-    changeLanguage(preferredLanguage); // Pritaikome kalbą pagal išsaugotą reikšmę
+    const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
+    changeLanguage(preferredLanguage); 
 });
 
-// Event listener kalbos pasirinkimui paspaudus ant vėliavų
+
 document.querySelectorAll('.flag-icon').forEach(img => {
     img.addEventListener('click', () => {
         const selectedLang = img.getAttribute('data-lang');
-        changeLanguage(selectedLang); // Keičiam kalbą ir išsaugom pasirinkimą
+        changeLanguage(selectedLang); 
     });
 });
+
+
+

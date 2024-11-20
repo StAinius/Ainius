@@ -98,7 +98,7 @@ function changeLanguage(language) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const preferredLanguage = localStorage.getItem("preferredLanguage") || "lt";
+    const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
     changeLanguage(preferredLanguage);
 });
 
