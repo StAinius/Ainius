@@ -21,6 +21,7 @@
             <li class="nav-item"><a href="index.html" id="home-nav">Home</a></li>
             <li class="nav-item"><a href="skills.html" id="skills-nav">Skills</a></li>
             <li class="nav-item"><a href="services.html" id="services-nav">Services</a></li>
+            <li class="nav-item"><a href="gallery.html" id="gallery-nav">Gallery</a></li>
             <li class="nav-item"><a href="contacts.html" class="active" id="contacts-nav">Contact</a></li>
         </ul>
     </nav>
@@ -76,17 +77,16 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // Initialize EmailJS with your user ID
+
         emailjs.init("qkBSDKHk2ugkjcBps");
 
         document.getElementById('submitForm').addEventListener('click', function () {
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            console.log("User email:", email);  // Logs the entered email
-            console.log("User message:", message);  // Logs the entered message
+            console.log("User email:", email); 
+            console.log("User message:", message); 
 
-            // Check if both fields are filled
             if (!email || !message) {
                 alert("Please fill out all fields!");
                 console.log("Form is incomplete.");
@@ -94,16 +94,16 @@
             }
 
             const submitBtn = document.getElementById('submitForm');
-            submitBtn.innerText = "Sending...";  // Change button text
-            submitBtn.disabled = true;  // Disable the button to prevent multiple submissions
+            submitBtn.innerText = "Sending..."; 
+            submitBtn.disabled = true; 
 
-            // Start sending the request to EmailJS
+
             console.log("Sending email...");
             emailjs.send("service_0uwjm9o", "template_jmo1ypj", {
                 from_name: email,
                 message: message
             }).then(function (response) {
-                // On successful request
+
                 console.log("Success response:", response);
                 const statusMessage = document.getElementById('statusMessage');
                 statusMessage.style.display = 'block';
@@ -111,18 +111,18 @@
                 statusMessage.style.color = '#155724';
                 statusMessage.innerText = "Message sent successfully!";
                 submitBtn.innerText = "Send Message";
-                submitBtn.disabled = false;  // Enable the button
-                document.getElementById('contactForm').reset();  // Clear the form
+                submitBtn.disabled = false;  
+                document.getElementById('contactForm').reset();
             }).catch(function (error) {
                 // On failed request
-                console.error("Error response:", error);  // Logs the error response
+                console.error("Error response:", error); 
                 const statusMessage = document.getElementById('statusMessage');
                 statusMessage.style.display = 'block';
                 statusMessage.style.backgroundColor = '#f8d7da';
                 statusMessage.style.color = '#721c24';
                 statusMessage.innerText = "Error sending the message. Please try again.";
                 submitBtn.innerText = "Send Message";
-                submitBtn.disabled = false;  // Enable the button
+                submitBtn.disabled = false; 
             });
         });
     </script>

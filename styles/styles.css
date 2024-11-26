@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     right: 20px;
     top: 20px;
+    z-index: 10; 
 }
 
 .flag-icon {

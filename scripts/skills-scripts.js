@@ -4,6 +4,7 @@ const translations = {
         "home-nav": "Pagrindinis",
         "skills-nav": "Įgūdžiai",
         "services-nav": "Paslaugos",
+        "gallery-nav": "Galerija",
         "contacts-nav": "Kontaktai",
         "skills-title": "Mano įgūdžiai",
         "programming-title": "Programavimas",
@@ -25,6 +26,7 @@ const translations = {
         "home-nav": "Home",
         "skills-nav": "Skills",
         "services-nav": "Services",
+        "gallery-nav": "Gallery",
         "contacts-nav": "Contacts",
         "skills-title": "My Skills",
         "programming-title": "Programming",
@@ -46,6 +48,7 @@ const translations = {
         "home-nav": "Inicio",
         "skills-nav": "Habilidades",
         "services-nav": "Servicios",
+        "gallery-nav": "Galería",
         "contacts-nav": "Contactos",
         "skills-title": "Mis habilidades",
         "programming-title": "Programación",
@@ -64,13 +67,14 @@ const translations = {
     }
 };
 
-// Kalbos keitimo funkcija
+
 function changeLanguage(language) {
     document.title = translations[language]["page-title"];
     document.getElementById("home-nav").textContent = translations[language]["home-nav"];
     document.getElementById("skills-nav").textContent = translations[language]["skills-nav"];
     document.getElementById("services-nav").textContent = translations[language]["services-nav"];
     document.getElementById("contacts-nav").textContent = translations[language]["contacts-nav"];
+    document.getElementById("gallery-nav").textContent = translations[language]["gallery-nav"];
     document.getElementById("skills-title").textContent = translations[language]["skills-title"];
     document.getElementById("programming-title").textContent = translations[language]["programming-title"];
     document.getElementById("networking-title").textContent = translations[language]["networking-title"];
@@ -91,10 +95,10 @@ function changeLanguage(language) {
     localStorage.setItem("preferredLanguage", language);
 }
 
-// Funkcija, kuri atnaujina sąrašus pagal kalbą
+
 function updateList(listId, translationsArray) {
     const list = document.getElementById(listId);
-    list.innerHTML = ""; // Išvalo senus sąrašus
+    list.innerHTML = ""; 
 
     translationsArray.forEach(item => {
         const li = document.createElement("li");

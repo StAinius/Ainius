@@ -4,6 +4,7 @@ const translations = {
         "home-nav": "Pagrindinis",
         "skills-nav": "Įgūdžiai",
         "services-nav": "Paslaugos",
+        "gallery-nav": "Galerija",
         "contacts-nav": "Kontaktai",
         "intro-title": "Susisiekime",
         "intro-text": "Turite klausimų ar norite aptarti galimą bendradarbiavimą? Susisiekite su manimi vienu iš žemiau nurodytų būdų arba užpildykite kontaktų formą.",
@@ -25,6 +26,7 @@ const translations = {
         "home-nav": "Home",
         "skills-nav": "Skills",
         "services-nav": "Services",
+        "gallery-nav": "Gallery",
         "contacts-nav": "Contacts",
         "intro-title": "Get in Touch",
         "intro-text": "Have questions or want to discuss potential collaboration? Reach out to me through one of the methods below or fill out the contact form.",
@@ -45,6 +47,7 @@ const translations = {
         "title": "Contactos",
         "home-nav": "Inicio",
         "skills-nav": "Habilidades",
+        "gallery-nav": "Galería",
         "services-nav": "Servicios",
         "contacts-nav": "Contactos",
         "intro-title": "Ponte en contacto",
@@ -64,14 +67,15 @@ const translations = {
     }
 };
 
-// Funkcija kalbos keitimui
+
 function changeLanguage(language) {
     document.title = translations[language].title;
 
-    // Atnaujiname navigacijos tekstus pagal ID
+
     document.getElementById('home-nav').textContent = translations[language]["home-nav"];
     document.getElementById('skills-nav').textContent = translations[language]["skills-nav"];
     document.getElementById('services-nav').textContent = translations[language]["services-nav"];
+    document.getElementById('gallery-nav').textContent = translations[language]["gallery-nav"];
     document.getElementById('contacts-nav').textContent = translations[language]["contacts-nav"];
 
     document.querySelector('.intro h1').textContent = translations[language]["intro-title"];
@@ -89,7 +93,7 @@ function changeLanguage(language) {
     document.getElementById('submitForm').textContent = translations[language]["form-submit"];
 
     const statusMessage = document.getElementById('statusMessage');
-    statusMessage.style.display = 'none'; // Hide status message
+    statusMessage.style.display = 'none'; 
 
     document.querySelector('.social-links').setAttribute('title', translations[language]["social-links-title"]);
 

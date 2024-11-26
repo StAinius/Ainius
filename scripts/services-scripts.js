@@ -3,6 +3,7 @@ const translations = {
         "home-nav": "Pagrindinis",
         "skills-nav": "Įgūdžiai",
         "services-nav": "Paslaugos",
+        "gallery-nav": "Galerija",
         "contacts-nav": "Kontaktai",
         "page-title": "Paslaugos",
         "services-title": "Mano teikiamos paslaugos",
@@ -39,6 +40,7 @@ const translations = {
         "home-nav": "Home",
         "skills-nav": "Skills",
         "services-nav": "Services",
+        "gallery-nav": "Gallery",
         "contacts-nav": "Contacts",
         "page-title": "Services",
         "services-title": "My Services",
@@ -76,6 +78,7 @@ const translations = {
         "skills-nav": "Habilidades",
         "services-nav": "Servicios",
         "contacts-nav": "Contactos",
+        "gallery-nav": "Galería",
         "page-title": "Servicios",
         "services-title": "Mis Servicios",
         "services-description": "Ofrezco una amplia gama de servicios de TI y diseño adaptados a sus necesidades individuales. Cada proyecto es único, y siempre me esfuerzo por encontrar la mejor solución.",
@@ -109,7 +112,7 @@ const translations = {
     }
 };
 
-// Funkcija kalbai pakeisti ir tekstams atnaujinti
+
 function changeLanguage(language) {
     const translation = translations[language];
     if (!translation) {
@@ -117,7 +120,7 @@ function changeLanguage(language) {
         return;
     }
 
-    // Atnaujinti visus elementus pagal vertimus
+
     for (const key in translation) {
         const element = document.getElementById(key);
         if (element) {
@@ -125,26 +128,23 @@ function changeLanguage(language) {
         }
     }
 
-    // Atnaujinti dokumento pavadinimą
     document.title = translation["page-title"];
 
-    // Atnaujinti HTML lang atributą
     document.documentElement.lang = language;
 }
 
-// Automatiškai užkrauti pasirinktą kalbą arba numatytąją (lietuvių kalbą)
+
 document.addEventListener("DOMContentLoaded", () => {
-    // Patikrinti išsaugotą kalbą, jei nėra, naudoti "lt"
+
     const preferredLanguage = localStorage.getItem("preferredLanguage") || "en";
     changeLanguage(preferredLanguage);
 });
 
-// Funkcija, kuri išsaugo kalbos pasirinkimą
 function saveLanguagePreference(language) {
-    // Išsaugome pasirinkimą localStorage
+
     localStorage.setItem("preferredLanguage", language);
     
-    // Keičiam kalbą
+
     changeLanguage(language);
 }
 

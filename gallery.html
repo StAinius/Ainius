@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <title>Galerija</title>
+</head>
+<body>
+    <div class="language-selector">
+        <img src="https://flagicons.lipis.dev/flags/4x3/lt.svg" alt="Lithuania" class="flag-icon" data-lang="lt" onclick="saveLanguagePreference('lt')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/gb.svg" alt="United Kingdom" class="flag-icon" data-lang="en" onclick="saveLanguagePreference('en')">
+        <img src="https://flagicons.lipis.dev/flags/4x3/es.svg" alt="Spain" class="flag-icon" data-lang="es" onclick="saveLanguagePreference('es')">
+    </div>
+    <nav class="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" id="home-nav">Home</a></li>
+            <li class="nav-item"><a href="skills.html" id="skills-nav">Skills</a></li>
+            <li class="nav-item"><a href="services.html" id="services-nav">Services</a></li>
+            <li class="nav-item"><a href="gallery.html" class="active" id="gallery-nav">Gallery</a></li>
+            <li class="nav-item"><a href="contacts.html" id="contacts-nav">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="in-progress">
+        <p>Kuriama / In Progress...</p>
+    </div>
+    
+
+    <script src="scripts/gallery-scripts.js"></script>
+</body>
+</html>
