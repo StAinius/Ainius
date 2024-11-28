@@ -51,3 +51,26 @@ document.querySelectorAll('.flag-icon').forEach(img => {
 
 
 
+let currentIndex = 0;
+const images = document.querySelectorAll('.gallery-images .image-container');
+const totalImages = images.length;
+
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+
+function showImage(index) {
+    const offset = -index * 100;
+    images.forEach(image => {
+        image.style.transform = `translateX(${offset}%)`;
+    });
+}
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+    showImage(currentIndex);
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+    showImage(currentIndex);
+});
