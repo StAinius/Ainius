@@ -5,6 +5,7 @@
     margin: 100px auto 0;
     padding: 40px;
     background: rgba(255, 255, 255, 0.7);
+    margin: 100px auto 0;
     backdrop-filter: blur(15px);
     border-radius: 20px;
     border: 1px solid rgba(66, 135, 245, 0.1);
@@ -17,17 +18,16 @@
     margin-bottom: 20px;
     font-weight: 600;
     background: linear-gradient(90deg, #0066cc, #4287f5);
-    background-clip: text; 
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -60px;
 }
 .skills-section h2 {
-    margin-top: 0px; 
-    padding-top: 0;
-    color: #2563eb;
-    text-align: left;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #0066cc, #4287f5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .skills-section {

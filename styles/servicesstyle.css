@@ -14,12 +14,12 @@
 
 
 #services-title {
-    margin-top: -50px; 
-    padding-top: 0;
-    color: #2563eb;
-    text-align: left;
     font-size: 36px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #0066cc, #4287f5);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .services-grid {

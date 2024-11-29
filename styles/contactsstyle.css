@@ -17,9 +17,8 @@
     margin-bottom: 20px;
     font-weight: 600;
     background: linear-gradient(90deg, #0066cc, #4287f5);
-    background-clip: text; 
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: -60px;
 }
 
 .contact-grid {
