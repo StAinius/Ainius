@@ -155,7 +155,6 @@ body {
     left: 100%; 
 }
 
-/* "Banguojantis" švytėjimo kontūras */
 .download-btn::after {
     content: '';
     position: absolute;
@@ -172,12 +171,11 @@ body {
 
 .download-btn:hover::after {
     opacity: 1;
-    transform: scale(1); /* Išsiplečia */
+    transform: scale(1); 
 }
 
-/* Teksto perėjimas */
 .download-btn:hover {
-    color: #f0f9ff; /* Šviesesnis tekstas */
+    color: #f0f9ff; 
 }
 
 
@@ -224,7 +222,7 @@ body {
     }
 
     .intro {
-        margin: 20px auto 0;
+        margin: -52px auto 0;
     }
 
     .image-content {
