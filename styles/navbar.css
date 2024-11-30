@@ -12,8 +12,6 @@
     justify-content: center;
 }
 
-
-
 .navbar {
     position: fixed;
     top: 20px;
@@ -125,11 +123,14 @@
     .nav-toggle {
         display: block;
         position: absolute;
-        top: 50%;
+        top: 70%;
         right: 1.5rem;
         transform: translateY(-50%);
         cursor: pointer;
         z-index: 10;
+        width: 40px; 
+        height: 40px; 
+        padding: 5px; 
     }
 
     .nav-toggle-icon {

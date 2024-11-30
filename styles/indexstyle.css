@@ -118,12 +118,12 @@ body {
 .download-btn {
     display: inline-block;
     margin-top: 20px;
-    padding: 15px 30px;
+    padding: 15px 40px;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
     color: white;
-    background: linear-gradient(135deg, #4287f5, #2563eb);
+    background: #797979; 
     border: none;
     border-radius: 12px;
     text-decoration: none;
@@ -131,7 +131,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 25px -5px rgba(66, 135, 245, 0.3);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.2);
 }
 
 .download-btn::before {
@@ -141,17 +141,45 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(66, 135, 245, 0.5), transparent);
     transition: 0.5s;
 }
 
 .download-btn:hover {
-    box-shadow: 0 15px 30px -5px rgba(66, 135, 245, 0.4);
+    background: linear-gradient(135deg, #4287f5, #2563eb); 
+    box-shadow: 0 15px 30px -5px rgba(66, 135, 245, 0.6);
+    transform: translateY(-2px); 
 }
 
 .download-btn:hover::before {
-    left: 100%;
+    left: 100%; 
 }
+
+/* "Banguojantis" švytėjimo kontūras */
+.download-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(66, 135, 245, 0.3), transparent);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: scale(0.5);
+    z-index: -1;
+}
+
+.download-btn:hover::after {
+    opacity: 1;
+    transform: scale(1); /* Išsiplečia */
+}
+
+/* Teksto perėjimas */
+.download-btn:hover {
+    color: #f0f9ff; /* Šviesesnis tekstas */
+}
+
 
 .image-content {
     max-width: 400px;
