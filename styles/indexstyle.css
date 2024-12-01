@@ -154,33 +154,60 @@
 
 
 /*    //////////////////////////    */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; 
+    }
+
     .intro-container {
         flex-direction: column;
         padding: 20px;
         margin-top: 20px;
         text-align: center;
+        width: 100%; 
         max-width: 100%;
-        width: 100%;
     }
+
+    .header {
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        z-index: 1;
+    }
+
     .header-title {
+        font-size: 28px;
+        text-align: center;
         padding-top: 200px;
         display: none;
     }
-    .header-title::after{
-        margin-top: 160px;
-    }
 
     .intro {
-        margin: -52px auto 0;
+        margin: -50px auto 0;
+        text-align: center;
     }
-    .body {
-        max-width: 100%;
+
+    .intro h1 {
+        font-size: 24px;
+        margin-top: 0;
     }
+
+    .intro p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
     .image-content {
         margin: 0 auto 20px;
         position: relative; 
         z-index: 10;
+        width: 80%; 
+    }
+
+    .profile-img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
     }
 
     .social-icon {
@@ -188,56 +215,15 @@
         justify-content: center; 
         width: 100%;
         text-align: center;
-        padding-left: 12px;
-        margin-top: 20px; 
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .download-btn {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-
-    .social-icon {
         font-size: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        position: absolute;
-        top: 30px;
-        left: 15px;
-        z-index: 1;
-    }
-    .intro h1 {
-        font-size: 24px;
-        margin-top: 0px;
-    }
-
-
-    .intro p {
-        font-size: 16px;
+        padding-left: 0;
+        margin: 20px auto 15px;
     }
 
     .download-btn {
         font-size: 14px;
         padding: 10px 20px;
+        margin: 20px auto;
+        display: inline-block;
     }
-
-    .profile-img {
-        width: 80%;
-    }
-
-    .intro-container {
-        flex-direction: column;
-    }
-
 }
