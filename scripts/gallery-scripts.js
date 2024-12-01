@@ -7,7 +7,8 @@ const translations = {
         "skills-nav": "Įgūdžiai",
         "services-nav": "Paslaugos",
         "gallery-nav": "Galerija",
-        "contacts-nav": "Kontaktai"
+        "contacts-nav": "Kontaktai",
+        "page-title": "Galerija"
     },
     "en": {
         "gallery-category-1": "Graphic Design",
@@ -17,7 +18,8 @@ const translations = {
         "skills-nav": "Skills",
         "services-nav": "Services",
         "gallery-nav": "Gallery",
-        "contacts-nav": "Contact"
+        "contacts-nav": "Contact",
+        "page-title": "Gallery"
     },
     "es": {
         "gallery-category-1": "Diseño Gráfico",
@@ -27,25 +29,34 @@ const translations = {
         "skills-nav": "Habilidades",
         "services-nav": "Servicios",
         "gallery-nav": "Galería",
-        "contacts-nav": "Contacto"
+        "contacts-nav": "Contacto",
+        "page-title": "Galería"
     }
 };
 
 function changeLanguage(language) {
-    document.querySelector('.h1').textContent = translations[language]["header-title"];
-    document.querySelectorAll('.gallery-category')[0].querySelector('h2').textContent = translations[language]["gallery-category-1"];
-    document.querySelectorAll('.gallery-category')[1].querySelector('h2').textContent = translations[language]["gallery-category-2"];
-    document.querySelectorAll('.gallery-category')[2].querySelector('h2').textContent = translations[language]["gallery-category-3"];
+    const translation = translations[language];
+    if (!translation) {
+        console.error("Translation for the selected language not found!");
+        return;
+    }
 
-    document.getElementById('home-nav').textContent = translations[language]["home-nav"];
-    document.getElementById('skills-nav').textContent = translations[language]["skills-nav"];
-    document.getElementById('services-nav').textContent = translations[language]["services-nav"];
-    document.getElementById('gallery-nav').textContent = translations[language]["gallery-nav"];
-    document.getElementById('contacts-nav').textContent = translations[language]["contacts-nav"];
-    
+    for (const key in translation) {
+        const element = document.getElementById(key);
+        if (element) {
+            element.textContent = translation[key];
+        }
+    }
+
+    document.querySelectorAll('.gallery-category').forEach((category, index) => {
+        const categoryKey = `gallery-category-${index + 1}`;
+        if (translation[categoryKey]) {
+            category.querySelector('h2').textContent = translation[categoryKey];
+        }
+    });
+
+    document.title = translation["page-title"];
     document.documentElement.lang = language;
-
-    localStorage.setItem("preferredLanguage", language);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -53,9 +64,14 @@ document.addEventListener("DOMContentLoaded", () => {
     changeLanguage(preferredLanguage);
 });
 
+function saveLanguagePreference(language) {
+    localStorage.setItem("preferredLanguage", language);
+    changeLanguage(language);
+}
+
 document.querySelectorAll('.flag-icon').forEach(img => {
     img.addEventListener('click', () => {
         const selectedLang = img.getAttribute('data-lang');
-        changeLanguage(selectedLang);
+        saveLanguagePreference(selectedLang);
     });
 });
