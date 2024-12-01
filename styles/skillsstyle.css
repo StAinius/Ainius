@@ -1,16 +1,54 @@
+body.dark-mode .about-container {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .skill-card {
+    background: rgba(30, 30, 30, 0.8);
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .skill-card h3 {
+    color: #60a5fa;
+}
+
+body.dark-mode .skill-card li {
+    color: #e0e0e0;
+}
+
+body.dark-mode .timeline {
+    border-left: 2px solid #60a5fa;
+}
+
+body.dark-mode .timeline-item::before {
+    background: #60a5fa;
+    border: 4px solid rgba(30, 30, 30, 0.9);
+}
+
+body.dark-mode .timeline-date {
+    color: #60a5fa;
+}
+
+body.dark-mode .timeline-content {
+    color: #e0e0e0;
+}
+
+
+
 .about-container {
     display: flex;
     flex-direction: column;
     max-width: 1500px;
-    margin: 100px auto 0;
+    margin: 150px auto 0;
     padding: 40px;
     background: rgba(255, 255, 255, 0.7);
-    margin: 100px auto 0;
     backdrop-filter: blur(15px);
     border-radius: 20px;
     border: 1px solid rgba(66, 135, 245, 0.1);
     box-shadow: 0 20px 50px rgba(66, 135, 245, 0.1);
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .about-container h1 {

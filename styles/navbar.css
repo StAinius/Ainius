@@ -1,3 +1,53 @@
+body.dark-mode {
+    background-color: #181818;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background: rgba(20, 20, 20, 0.8);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: linear-gradient(135deg, #333 0%, #444 100%);
+}
+
+body.dark-mode .nav-item a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-item a:hover {
+    color: #60a5fa;
+}
+
+body.dark-mode .nav-item a::after {
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+}
+
+body.dark-mode .nav-item a.active {
+    color: #93c5fd;
+}
+
+body.dark-mode .nav-item a.active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+body.dark-mode .nav-item::before {
+    background: #93c5fd;
+}
+
+body.dark-mode .nav-toggle-icon {
+    background-color: #e0e0e0;
+}
+
+body.dark-mode .nav-toggle-icon::before,
+body.dark-mode .nav-toggle-icon::after {
+    background-color: #e0e0e0;
+}
+
+
+
 .logo {
     width: 48px;
     height: 48px;
@@ -22,7 +72,7 @@
     padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(15px);
-    box-shadow: 0 4px 25px rgba(66, 135, 245, 0.1);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
     z-index: 100;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -94,7 +144,6 @@
 
 
 .nav-item::before {
-    content: '';
     position: absolute;
     top: -4px;
     right: -4px;
@@ -114,6 +163,32 @@
 
 
 @media (max-width: 768px) {
+    body.dark-mode .navbar {
+        background: rgba(20, 20, 20, 0.8);
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    body.dark-mode .nav-list {
+        background: rgba(30, 30, 30, 0.95);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    body.dark-mode .nav-item a {
+        color: #e0e0e0;
+    }
+
+    body.dark-mode .nav-item a:hover {
+        color: #60a5fa;
+    }
+
+    body.dark-mode .nav-toggle-icon {
+        background-color: #e0e0e0;
+    }
+
+    body.dark-mode .nav-toggle-icon::before,
+    body.dark-mode .nav-toggle-icon::after {
+        background-color: #e0e0e0;
+    }
     .navbar {
         padding: 2rem 1rem;
         background: rgba(255, 255, 255, 0.8);
@@ -130,7 +205,7 @@
         z-index: 10;
         width: 40px; 
         height: 40px; 
-        padding: 5px; 
+        padding-top: 5px; 
     }
 
     .nav-toggle-icon {
@@ -205,6 +280,20 @@
 }
 
 @media (max-width: 480px) {
+    body.dark-mode .navbar {
+        padding: 2rem 1rem;
+    }
+
+    body.dark-mode .logo {
+        width: 40px;
+        height: 40px;
+        left: 12px;
+    }
+
+    body.dark-mode .nav-item a {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
     .navbar {
         padding: 2rem 1rem;
     }

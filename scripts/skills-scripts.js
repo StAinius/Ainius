@@ -118,3 +118,5 @@ document.querySelectorAll('.flag-icon').forEach(img => {
         changeLanguage(selectedLang); 
     });
 });
+
+

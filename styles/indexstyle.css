@@ -1,3 +1,51 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .intro-container {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid rgba(100, 100, 100, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .intro p {
+    color: #b0bec5;
+}
+
+body.dark-mode .download-btn {
+    background: #1e3a8a;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .download-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .download-btn::before {
+    background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.5), transparent);
+}
+
+body.dark-mode .download-btn::after {
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.3), transparent);
+}
+
+body.dark-mode .profile-img {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #2c2c2c, #383838) padding-box,
+        linear-gradient(135deg, #60a5fa, #1e3a8a, #101010) border-box;
+}
+
+body.dark-mode .social-icon {
+    color: #60a5fa;
+}
+
+body.dark-mode .social-icon:hover {
+    color: #93c5fd;
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
 
 .header {
     position: absolute;
@@ -14,11 +62,31 @@
     font-weight: 600;
 }
 
+header::before {
+    margin-left: auto;
+}
+
+header::after, header::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #3d1cce, #5f62f7); 
+    display: block;
+    transition: width 0.5s ease, transform 0.5s ease;
+    
+    box-shadow: 0 0 5px rgba(76, 36, 255, 0.7), 0 0 10px rgba(76, 36, 255, 0.5);
+    
+}
+
+header:hover::after, header:hover::before {
+    width: 100%;
+}
+
 .intro-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 100px auto 0;
+    margin: 150px auto 0;
     max-width: 1200px;
     padding: 40px;
     padding-top: 100px;
@@ -75,7 +143,7 @@
     font-weight: 500;
     text-align: center;
     color: white;
-    background: #797979; 
+    background: #2563eb;
     border: none;
     border-radius: 12px;
     text-decoration: none;
@@ -93,18 +161,18 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(66, 135, 245, 0.5), transparent);
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.5), transparent);
     transition: 0.5s;
 }
 
 .download-btn:hover {
-    background: linear-gradient(135deg, #4287f5, #2563eb); 
-    box-shadow: 0 15px 30px -5px rgba(66, 135, 245, 0.6);
-    transform: translateY(-2px); 
+    background: linear-gradient(135deg, #4287f5, #1e40af);
+    box-shadow: 0 15px 30px -5px rgba(37, 99, 235, 0.6);
+    transform: translateY(-2px);
 }
 
 .download-btn:hover::before {
-    left: 100%; 
+    left: 100%;
 }
 
 .download-btn::after {
@@ -114,7 +182,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(66, 135, 245, 0.3), transparent);
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent);
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s;
     transform: scale(0.5);
@@ -123,13 +191,12 @@
 
 .download-btn:hover::after {
     opacity: 1;
-    transform: scale(1); 
+    transform: scale(1);
 }
 
 .download-btn:hover {
-    color: #f0f9ff; 
+    color: #f0f9ff;
 }
-
 
 .image-content {
     max-width: 400px;
@@ -146,17 +213,15 @@
     box-shadow: 0 10px 30px rgba(66, 135, 245, 0.2), 0 0 15px rgba(66, 135, 245, 0.2);
     border: 4px solid transparent;
     background: linear-gradient(135deg, #f0f9ff, #cbedff) padding-box,
-        linear-gradient(135deg, #4287f5,#b0ceff, #260796) border-box;
+        linear-gradient(135deg, #4287f5, #b0ceff, #260796) border-box;
     transition: all 0.8s ease;
     transform-style: preserve-3d;
     will-change: transform;
 }
 
-
-/*    //////////////////////////    */
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden; 
+        overflow-x: hidden;
     }
 
     .intro-container {
@@ -164,7 +229,7 @@
         padding: 20px;
         margin-top: 20px;
         text-align: center;
-        width: 100%; 
+        width: 100%;
         max-width: 100%;
     }
 
@@ -199,9 +264,9 @@
 
     .image-content {
         margin: 0 auto 20px;
-        position: relative; 
+        position: relative;
         z-index: 10;
-        width: 80%; 
+        width: 80%;
     }
 
     .profile-img {
@@ -211,8 +276,8 @@
     }
 
     .social-icon {
-        display: inline-flex; 
-        justify-content: center; 
+        display: inline-flex;
+        justify-content: center;
         width: 100%;
         text-align: center;
         font-size: 24px;
