@@ -1,5 +1,6 @@
+
 .header {
-    position: flex;
+    position: absolute;
     top: 40px;
     left: 50px;
     z-index: 1;
@@ -7,44 +8,10 @@
 
 .header-title {
     font-size: 72px;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #0066cc;
-    font-weight: 600;
-    background: linear-gradient(90deg, #4287f5, #2563eb, #3b82f6);
-    background-size: 300%;
+    background: linear-gradient(90deg, #0066cc, #4287f5);
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(66, 135, 245, 0.2);
-    letter-spacing: 1px;
-    position: relative;
-    animation: gradient-flow 5s infinite linear;
-}
-
-@keyframes gradient-flow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-.header-title::after {
-    content: '';
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: 100px;
-    background: linear-gradient(90deg, transparent, #4287f5, transparent);
+    font-weight: 600;
 }
 
 .intro-container {
@@ -177,18 +144,14 @@
     height: auto;
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(66, 135, 245, 0.2), 0 0 15px rgba(66, 135, 245, 0.2);
-    border: 8px solid transparent;
+    border: 4px solid transparent;
     background: linear-gradient(135deg, #f0f9ff, #cbedff) padding-box,
-        linear-gradient(135deg, #4287f5, #2563eb) border-box;
+        linear-gradient(135deg, #4287f5,#b0ceff, #260796) border-box;
     transition: all 0.8s ease;
     transform-style: preserve-3d;
     will-change: transform;
 }
 
-.profile-img:hover {
-    border-color: #424242;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.3);
-}
 
 /*    //////////////////////////    */
 @media (max-width: 1024px) {

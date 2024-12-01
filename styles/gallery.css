@@ -84,7 +84,9 @@
         font-size: 24px;
         text-align: center;
     }
-
+    .gallery-container {
+        margin: 30px auto 0;
+    }
     .image-container {
         flex: 0 1 calc(50% - 20px);
         max-width: calc(50% - 20px);

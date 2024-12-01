@@ -172,6 +172,9 @@
     .benefits-grid {
         grid-template-columns: 1fr;
     }
+    .services-container {
+        margin: 30px auto 0;
+    }
 
     #services-title {
         font-size: 28px;
