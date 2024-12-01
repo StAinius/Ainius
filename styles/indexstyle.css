@@ -226,4 +226,7 @@
         margin: 20px auto;
         display: inline-block;
     }
+    * {
+        outline: 1px solid red; /* Padės vizualiai identifikuoti probleminius elementus */
+    }
 }
