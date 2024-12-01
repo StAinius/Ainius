@@ -174,7 +174,9 @@
     .intro {
         margin: -52px auto 0;
     }
-
+    .body {
+        max-width: 100%;
+    }
     .image-content {
         margin: 0 auto 20px;
         position: relative; 
