@@ -1,3 +1,4 @@
+
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
@@ -32,8 +33,8 @@ body.dark-mode .download-btn::after {
 }
 
 body.dark-mode .profile-img {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #2c2c2c, #383838) padding-box,
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 15px rgb(34, 37, 255);
+    background: 
         linear-gradient(135deg, #60a5fa, #1e3a8a, #101010) border-box;
 }
 
@@ -60,27 +61,10 @@ body.dark-mode .social-icon:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 600;
+    position: relative;
+    overflow: hidden;
 }
 
-header::before {
-    margin-left: auto;
-}
-
-header::after, header::before {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, #3d1cce, #5f62f7); 
-    display: block;
-    transition: width 0.5s ease, transform 0.5s ease;
-    
-    box-shadow: 0 0 5px rgba(76, 36, 255, 0.7), 0 0 10px rgba(76, 36, 255, 0.5);
-    
-}
-
-header:hover::after, header:hover::before {
-    width: 100%;
-}
 
 .intro-container {
     display: flex;
@@ -217,6 +201,8 @@ header:hover::after, header:hover::before {
     transition: all 0.8s ease;
     transform-style: preserve-3d;
     will-change: transform;
+    background: 
+        linear-gradient(135deg, #60a5fa, #3866e4, #4e4e4e) border-box;
 }
 
 @media (max-width: 768px) {
@@ -292,3 +278,4 @@ header:hover::after, header:hover::before {
         display: inline-block;
     }
 }
+

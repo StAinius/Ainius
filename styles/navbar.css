@@ -25,7 +25,7 @@ body.dark-mode .nav-item a::after {
 }
 
 body.dark-mode .nav-item a.active {
-    color: #93c5fd;
+    color: #258bff;
 }
 
 body.dark-mode .nav-item a.active::after {
