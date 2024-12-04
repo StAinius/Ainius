@@ -278,12 +278,6 @@ body.dark-mode .nav-toggle-icon::after {
         transform: rotate(-45deg);
         bottom: 0;
     }
-    .switch {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        right: 160px;
-        display: inline-block;
-    }
 }
 
 @media (max-width: 480px) {
