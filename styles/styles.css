@@ -111,8 +111,7 @@ body.dark-mode {
 .switch {
     position: relative;
     width: 60px;
-    height: 30px;
-    top: 9px;
+    height: 40px;
     background-color: #4a90e2;
     border-radius: 20px;
     z-index: 1;
